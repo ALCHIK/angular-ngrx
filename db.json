@@ -1,0 +1,39 @@
+{
+  "statuses": [
+    {
+      "id": 1,
+      "status": "normal"
+    },
+    {
+      "id": 2,
+      "status": "warning"
+    },
+    {
+      "id": 3,
+      "status": "error"
+    }
+  ],
+  "equipments": [
+    {
+      "id": 1,
+      "name": "Point_1",
+      "address": "Msk",
+      "vendor": "Huawei",
+      "model": "RG21"
+    },
+    {
+      "id": 2,
+      "name": "Point_2",
+      "address": "Msk",
+      "vendor": "Huawei",
+      "model": "RG22"
+    },
+    {
+      "id": 3,
+      "name": "Point_3",
+      "address": "Msk",
+      "vendor": "Huawei",
+      "model": "RG23"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<table 
+    mat-table 
+    [dataSource] = "allEquipments$" 
+    class = "mat-elevation-z8" 
+    style="width: 100%;"
+    > 
+    <ng-container matColumnDef = "id">
+        <th mat-header-cell *matHeaderCellDef> Id</th>
+        <td mat-cell *matCellDef = "let element"> 
+        <span>{{element.id}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef = "name">
+        <th mat-header-cell *matHeaderCellDef> Name</th>
+        <td mat-cell *matCellDef = "let element"> 
+        <span><a [routerLink]="['/information',element.id]">{{element.name}}</a></span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef = "address">
+        <th mat-header-cell *matHeaderCellDef> Address</th>
+        <td mat-cell *matCellDef = "let element"> 
+        <span>{{element.address}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef = "vendor">
+        <th mat-header-cell *matHeaderCellDef> Vendor</th>
+        <td mat-cell *matCellDef = "let element"> 
+        <span>{{element.vendor}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef = "model">
+        <th mat-header-cell *matHeaderCellDef> Model</th>
+        <td mat-cell *matCellDef = "let element"> 
+        <span>{{element.model}}</span>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef = "status">
+        <th mat-header-cell *matHeaderCellDef> Status</th>
+        <td mat-cell *matCellDef = "let element"> 
+        <span class="{{element.status}}">{{element.status}}</span>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef = "displayedColumns"></tr>
+    <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
+</table>
